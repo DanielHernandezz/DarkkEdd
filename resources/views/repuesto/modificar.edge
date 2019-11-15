@@ -1,0 +1,78 @@
+<html style="background-color: gray">
+    <body>
+        <br>
+        <center>
+        <div>
+            <table style="text-align: center" class="table is-bordered is-striped is-narrow is-hoverable container">
+                <br>
+                <br>
+                <br>
+                <tr>
+                    <th style="text-align: center" class="th is-black">ID</th>
+                    <th style="text-align: center" class="th is-black">Descripcion</th>
+                    <th style="text-align: center" class="th is-black">Costo unit</th>
+                    <th style="text-align: center" class="th is-black">Precio unit</th>
+                    <th style="text-align: center" class="th is-black">Impuesto parcial</th>
+                    <th style="text-align: center" class="th is-black">Hoja de parte id </th>
+                </tr>
+                <tr>
+                        <th style="text-align: center;" class = "th is-primary has-addons is-centered">{{ rep.id }} </th>
+                        <th style="text-align: center" class = "th is-danger"> {{ rep.descripcion }} </th>
+                        <th style="text-align: center" class = "th is-warning"> {{ rep.costoUnit }} </th>
+                        <th style="text-align: center" class = "th is-danger"> {{ rep.precioUnit }} </th>
+                        <th style="text-align: center" class = "th is-warning"> {{ rep.impParcial }} </th>  
+                        <th style="text-align: center" class = "th is-danger"> {{ rep.hojaDeParte_id }} </th>
+                </tr>
+            </table>
+        </div> <br>
+    </center>
+
+        <div style="text-align: center">
+            <center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <table style="text-align: center" class="table is-bordered is-striped is-narrow is-hoverable container">
+                <form action="{{ rep.id }}" method="POST">
+                <tr>
+                    <th class="th is-info" style="text-align: end">MODIFICAR</th>
+                    <th class="th is-info" style="text-align: initial">RESPONSABLE</th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">DESCRIPCION</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{rep.descripcion}}" name="descripcion" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">COSTO UNIT</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{rep.costoUnit}}" name="costoUnit" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">PRECIO UNIT</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{rep.precioUnit}}" name="precioUnit" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">IMPUESTO PAR</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{rep.impParcial}}" name="impParcial" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">HOJA DE PARTE ID</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{rep.hojaDeParte_id}}" name="hojaDeParte_id" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-success" style="text-align: center"></th>
+                </tr>
+            </table>
+            <button type="submit" class="button is-warning is-rounded">Modificar Repuesto</button>
+
+            </form>
+            <br>
+            <br>
+            <a href="../repuesto">
+                <button class="button is-primary is-rounded">Regresar</button>
+            </a>
+            
+        </div>
+    </center>
+    </body>
+</html>

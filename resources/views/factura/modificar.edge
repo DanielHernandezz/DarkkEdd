@@ -1,0 +1,72 @@
+<html style="background-color: gray">
+    <body>
+        <br>
+        <center>
+        <div>
+            <table style="text-align: center" class="table is-bordered is-striped is-narrow is-hoverable container">
+                <br>
+                <br>
+                <br>
+                <tr>
+                    <th style="text-align: center" class="th is-black">ID</th>
+                    <th style="text-align: center" class="th is-black">Fecha</th>
+                    <th style="text-align: center" class="th is-black">Imp pesos</th>
+                    <th style="text-align: center" class="th is-black">Imp dol</th>
+                    <th style="text-align: center" class="th is-black">RFC</th>
+                </tr>
+                <tr>
+                        <th style="text-align: center" class = "th is-warning"> {{ fac.id }} </th>  
+                        <th style="text-align: center;" class = "th is-primary has-addons is-centered">{{ fac.fecha }}</th>
+                        <th style="text-align: center" class = "th is-danger"> {{ fac.imp_pesos }} </th>
+                        <th style="text-align: center" class = "th is-warning"> {{ fac.imp_dol }} </th>
+                        <th style="text-align: center" class = "th is-warning"> {{ fac.rfc }} </th>   
+                </tr>
+            </table>
+        </div> <br>
+    </center>
+
+        <div style="text-align: center">
+            <center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <table style="text-align: center" class="table is-bordered is-striped is-narrow is-hoverable container">
+                <form action="{{ fac.id }}" method="POST">
+                <tr>
+                    <th class="th is-info" style="text-align: end">MODIFICAR</th>
+                    <th class="th is-info" style="text-align: initial">FACTURA</th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">FECHA</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{fac.fecha}}" name="fecha" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">IMP PESOS</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{fac.imp_pesos}}" name="imp_pesos" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">IMP DOL</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{fac.imp_dol}}" name="imp_dol" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">RFC</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{fac.rfc}}" name="rfc" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-success" style="text-align: center"></th>
+                </tr>
+            </table>
+            <button type="submit" class="button is-warning is-rounded">Modificar Factura</button>
+
+            </form>
+            <br>
+            <br>
+            <a href="../factura">
+                <button class="button is-primary is-rounded">Regresar</button>
+            </a>
+            
+        </div>
+    </center>
+    </body>
+</html>

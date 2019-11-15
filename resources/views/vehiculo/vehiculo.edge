@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: gray">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vehiculos</title>
+</head>
+<body>
+   <center><h1>.-Vehiculos-.</h1>
+                <tr>
+                    <th style="text-align: center" class="th is-black">ID</th>
+                    <th style="text-align: center" class="th is-black">Modelo</th>
+                    <th style="text-align: center" class="th is-black">Color</th>
+                    <th style="text-align: center" class="th is-black">Fecha</th>
+                    <th style="text-align: center" class="th is-black">Hora</th>
+                    <th style="text-align: center" class="th is-black">Cliente</th>
+                </tr>
+                <br>
+                <br>
+   </center>
+    @each(vehiculos in varvehi)
+    <tr>
+        <center>
+        <form action="delete/{{vehiculos.id }} " method="GET">
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ vehiculos.id }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ vehiculos.modelo }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ vehiculos.color }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ vehiculos.fecha }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ vehiculos.hora_ent }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ vehiculos.cliente_id }}
+        <button>ELIMINAR</button> <a href="vehiEdit/{{vehiculos.id}}">EDITAR</a></form></th>
+        </center>
+    </tr>
+    @endeach
+    <br>
+    <br>
+    <br>
+    <center> <a href="../">VOLVER</a> <a href="vehiCreate">CREAR</a> </center>
+    
+</body>
+</html>

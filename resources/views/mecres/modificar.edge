@@ -1,0 +1,78 @@
+<html style="background-color: gray">
+    <body>
+        <br>
+        <center>
+        <div>
+            <table style="text-align: center" class="table is-bordered is-striped is-narrow is-hoverable container">
+                <br>
+                <br>
+                <br>
+                <tr>
+                    <th style="text-align: center" class="th is-black">ID</th>
+                    <th style="text-align: center" class="th is-black">Nombre</th>
+                    <th style="text-align: center" class="th is-black">Direccion</th>
+                    <th style="text-align: center" class="th is-black">Tel</th>
+                    <th style="text-align: center" class="th is-black">CostoXHoral</th>
+                    <th style="text-align: center" class="th is-black">Categoria</th>
+                </tr>
+                <tr>
+                        <th style="text-align: center;" class = "th is-primary has-addons is-centered">{{ meres.id }} </th>
+                        <th style="text-align: center" class = "th is-danger"> {{ meres.nombre }} </th>
+                        <th style="text-align: center" class = "th is-warning"> {{ meres.direccion }} </th>
+                        <th style="text-align: center" class = "th is-warning"> {{ meres.tel }} </th>
+                        <th style="text-align: center" class = "th is-danger"> {{ meres.costoXHora }} </th>   
+                        <th style="text-align: center" class = "th is-danger"> {{ meres.categoria }} </th>
+                </tr>
+            </table>
+        </div> <br>
+    </center>
+
+        <div style="text-align: center">
+            <center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <table style="text-align: center" class="table is-bordered is-striped is-narrow is-hoverable container">
+                <form action="{{ meres.id }}" method="POST">
+                <tr>
+                    <th class="th is-info" style="text-align: end">MODIFICAR</th>
+                    <th class="th is-info" style="text-align: initial">RESPONSABLE</th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">NOMBRE</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{meres.nombre}}" name="nombre" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">DIRECCION</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{meres.direccion}}" name="direccion" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">TELEFONO</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{meres.tel}}" name="tel" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">COSTO X HORA</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{meres.costoXHora}}" name="costoXHora" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">CATEGORIA</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{meres.categoria}}" name="categoria" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-success" style="text-align: center"></th>
+                </tr>
+            </table>
+            <button type="submit" class="button is-warning is-rounded">Modificar Mecanico</button>
+
+            </form>
+            <br>
+            <br>
+            <a href="../mecres">
+                <button class="button is-primary is-rounded">Regresar</button>
+            </a>
+            
+        </div>
+    </center>
+    </body>
+</html>

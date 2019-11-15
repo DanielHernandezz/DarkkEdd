@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: gray">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>REPUESTOS</title>
+</head>
+<body>
+   <center><h1>.-REPUESTOS-.</h1>
+                <tr>
+                    <th style="text-align: center" class="th is-black">ID</th>
+                    <th style="text-align: center" class="th is-black">Descripcion</th>
+                    <th style="text-align: center" class="th is-black">CostoUnit</th>
+                    <th style="text-align: center" class="th is-black">PrecioUnit</th>
+                    <th style="text-align: center" class="th is-black">ImpuestoParcial</th>
+                    <th style="text-align: center" class="th is-black">HojaId </th>
+                </tr>
+                <br>
+                <br>
+   </center>
+    @each(repuestos in varre)
+    <tr>
+        <center>
+        <form action="delete/{{repuestos.id }} " method="GET">
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ repuestos.id }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ repuestos.descripcion }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ repuestos.costoUnit }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ repuestos.precioUnit }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ repuestos.impParcial }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ repuestos.hojaDeParte_id }}
+        <button>ELIMINAR</button> <a href="reEdit/{{repuestos.id}}">EDITAR</a></form></th>
+        </center>
+    </tr>
+    @endeach
+    <br>
+    <br>
+    <br>
+    <center> <a href="../">VOLVER</a> <a href="reCreate">CREAR</a> </center>
+    
+</body>
+</html>

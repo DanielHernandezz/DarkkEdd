@@ -1,0 +1,72 @@
+<html style="background-color: gray">
+    <body>
+        <br>
+        <center>
+        <div>
+            <table style="text-align: center" class="table is-bordered is-striped is-narrow is-hoverable container">
+                <br>
+                <br>
+                <br>
+                <tr>
+                    <th style="text-align: center" class="th is-black">ID</th>
+                    <th style="text-align: center" class="th is-black">Concepto</th>
+                    <th style="text-align: center" class="th is-black">Cantidad</th>
+                    <th style="text-align: center" class="th is-black">Reparacion</th>
+                    <th style="text-align: center" class="th is-black">Mecanico id</th>
+                </tr>
+                <tr>
+                        <th style="text-align: center;" class = "th is-primary has-addons is-centered">{{ hoj.id }} </th>
+                        <th style="text-align: center" class = "th is-danger"> {{ hoj.concepto }} </th>
+                        <th style="text-align: center" class = "th is-warning"> {{ hoj.cantidad }} </th>
+                        <th style="text-align: center" class = "th is-warning"> {{ hoj.reparacion }} </th>
+                        <th style="text-align: center" class = "th is-danger"> {{ hoj.mecanicoResponsable_id }} </th>   
+                </tr>
+            </table>
+        </div> <br>
+    </center>
+
+        <div style="text-align: center">
+            <center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <table style="text-align: center" class="table is-bordered is-striped is-narrow is-hoverable container">
+                <form action="{{ hoj.id }}" method="POST">
+                <tr>
+                    <th class="th is-info" style="text-align: end">MODIFICAR</th>
+                    <th class="th is-info" style="text-align: initial">HOJA</th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">CONCEPTO</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{hoj.concepto}}" name="concepto" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">CANTIDAD</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{hoj.cantidad}}" name="cantidad" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">REPARACION</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{hoj.reparacion}}" name="reparacion" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">MECANICO ID</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{hoj.mecanicoResponsable_id}}" name="mecanicoResponsable_id" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-success" style="text-align: center"></th>
+                </tr>
+            </table>
+            <button type="submit" class="button is-warning is-rounded">Modificar Hoja</button>
+
+            </form>
+            <br>
+            <br>
+            <a href="../hoja">
+                <button class="button is-primary is-rounded">Regresar</button>
+            </a>
+            
+        </div>
+    </center>
+    </body>
+</html>

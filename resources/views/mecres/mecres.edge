@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: gray">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mecanicos</title>
+</head>
+<body>
+   <center><h1>.-Mecanicos-.</h1>
+                <tr>
+                    <th style="text-align: center" class="th is-black">ID</th>
+                    <th style="text-align: center" class="th is-black">Nombre</th>
+                    <th style="text-align: center" class="th is-black">Direccion</th>
+                    <th style="text-align: center" class="th is-black">Tel</th>
+                    <th style="text-align: center" class="th is-black">CostoXHoral</th>
+                    <th style="text-align: center" class="th is-black">Categoria</th>
+                </tr>
+                <br>
+                <br>
+    </center>
+    @each(mecanicos in varmecres)
+    <tr>
+        <center>
+        <form action="delete/{{mecanicos.id }} " method="GET">
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ mecanicos.id }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ mecanicos.nombre }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ mecanicos.direccion }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ mecanicos.tel }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ mecanicos.costoXHora }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ mecanicos.categoria }}
+        <button>ELIMINAR</button> <a href="mecresEdit/{{mecanicos.id}}">EDITAR</a></form></th>
+        </center>
+    </tr>
+    @endeach
+    <br>
+    <br>
+    <br>
+    <center> <a href="../">VOLVER</a> <a href="mecresCreate">CREAR</a> </center>
+    
+</body>
+</html>

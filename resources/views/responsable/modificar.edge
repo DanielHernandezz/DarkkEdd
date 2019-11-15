@@ -1,0 +1,60 @@
+<html style="background-color: gray">
+    <body>
+        <br>
+        <center>
+        <div>
+            <table style="text-align: center" class="table is-bordered is-striped is-narrow is-hoverable container">
+                <br>
+                <br>
+                <br>
+                <tr>
+                    <th style="text-align: center" class="th is-black">ID</th>
+                    <th style="text-align: center" class="th is-black">Mecanico id</th>
+                    <th style="text-align: center" class="th is-black">Vehiculo id</th>
+                </tr>
+                <tr>
+                        <th style="text-align: center;" class = "th is-primary has-addons is-centered">{{ meca.id }} </th>
+                        <th style="text-align: center" class = "th is-danger"> {{ meca.mecanicoResponsable_id }} </th>
+                        <th style="text-align: center" class = "th is-warning"> {{ meca.vehiculo_id }} </th>                       
+                </tr>
+            </table>
+        </div> <br>
+    </center>
+
+        <div style="text-align: center">
+            <center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <table style="text-align: center" class="table is-bordered is-striped is-narrow is-hoverable container">
+                <form action="{{ meca.id }}" method="POST">
+                <tr>
+                    <th class="th is-info" style="text-align: end">MODIFICAR</th>
+                    <th class="th is-info" style="text-align: initial">RESPONSABLE</th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">MECANICO ID</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{meca.mecanicoResponsable_id}}" name="mecanicoResponsable_id" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">VEHICULO ID</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{meca.vehiculo_id}}" name="vehiculo_id" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-success" style="text-align: center"></th>
+                </tr>
+            </table>
+            <button type="submit" class="button is-warning is-rounded">Modificar Responsable</button>
+
+            </form>
+            <br>
+            <br>
+            <a href="../responsable">
+                <button class="button is-primary is-rounded">Regresar</button>
+            </a>
+            
+        </div>
+    </center>
+    </body>
+</html>

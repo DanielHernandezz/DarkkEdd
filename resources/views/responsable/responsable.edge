@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: gray">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsable</title>
+</head>
+<body>
+   <center><h1>.-Responsables-.</h1>
+                <tr>
+                    <th style="text-align: center" class="th is-black">ID</th>
+                    <th style="text-align: center" class="th is-black">MecanicoId</th>
+                    <th style="text-align: center" class="th is-black">VehiculoId</th>
+                </tr>
+                <br>
+                <br>
+   </center>
+    @each(mecanicos in varres)
+    <tr>
+        <center>
+        <form action="delete/{{mecanicos.id }} " method="GET">
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ mecanicos.id }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ mecanicos.mecanicoResponsable_id }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ mecanicos.vehiculo_id }}
+        <button>ELIMINAR</button> <a href="resEdit/{{mecanicos.id}}">EDITAR</a></form></th>
+        </center>
+    </tr>
+    @endeach
+    <br>
+    <br>
+    <br>
+    <center> <a href="../">VOLVER</a> <a href="resCreate">CREAR</a> </center>
+    
+</body>
+</html>

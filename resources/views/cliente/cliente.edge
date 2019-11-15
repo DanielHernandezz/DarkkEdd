@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: gray">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cliente</title>
+</head>
+<body>
+<div>
+   <center><h1>.-Clientes-.</h1>
+    <tr>
+        <th style="text-align: center" class="th is-black">ID</th>
+        <th style="text-align: center" class="th is-black">Nombre</th>
+        <th style="text-align: center" class="th is-black">Direccion</th>
+        <th style="text-align: center" class="th is-black">Telefono</th>
+    </tr>
+    <br>
+    <br>
+    </center>
+    @each(clientes in varclient)
+    <tr>
+        <center>
+        <form action="cliente/{{clientes.id }} " method="GET">
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ clientes.id }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ clientes.nombre }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ clientes.direccion }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ clientes.telefono }}
+        <button>ELIMINAR</button> <a href="clienteCreate/{{clientes.id}}">EDITAR</a></form></th>
+        </center>
+    </tr>
+    @endeach
+    <br>
+    <br>
+    <br>
+    <center> <a href="../">VOLVER</a> <a href="clienteCreate">CREAR</a> </center>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<html style="background-color: gray">
+    <body>
+        <br>
+        <center>
+        <div>
+            <table style="text-align: center" class="table is-bordered is-striped is-narrow is-hoverable container">
+                <br>
+                <br>
+                <br>
+                <tr>
+                    <th style="text-align: center" class="th is-black">ID</th>
+                    <th style="text-align: center" class="th is-black">Nombre</th>
+                    <th style="text-align: center" class="th is-black">Direccion</th>
+                    <th style="text-align: center" class="th is-black">Telefono</th>
+                </tr>
+                <tr>
+                        <th style="text-align: center" class = "th is-warning"> {{ cli.id }} </th>  
+                        <th style="text-align: center;" class = "th is-primary has-addons is-centered">{{ cli.nombre }}</th>
+                        <th style="text-align: center" class = "th is-danger"> {{ cli.direccion }} </th>
+                        <th style="text-align: center" class = "th is-warning"> {{ cli.telefono }} </th>
+                </tr>
+            </table>
+        </div> <br>
+    </center>
+
+        <div style="text-align: center">
+            <center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <table style="text-align: center" class="table is-bordered is-striped is-narrow is-hoverable container">
+                <form action="{{ cli.id }}" method="POST">
+                <tr>
+                    <th class="th is-info" style="text-align: end">MODIFICAR</th>
+                    <th class="th is-info" style="text-align: initial">CLIENTE</th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">NOMBRE</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{cli.nombre}}" name="nombre" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">IMP PESOS</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{cli.direccion}}" name="direccion" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">IMP DOL</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{cli.telefono}}" name="telefono" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-success" style="text-align: center"></th>
+                </tr>
+            </table>
+            <button type="submit" class="button is-warning is-rounded">Modificar Cliente</button>
+
+            </form>
+            <br>
+            <br>
+            <a href="../cliente">
+                <button class="button is-primary is-rounded">Regresar</button>
+            </a>
+            
+        </div>
+    </center>
+    </body>
+</html>

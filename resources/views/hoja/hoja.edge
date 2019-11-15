@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: gray">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HOJA</title>
+</head>
+<body>
+   <center><h1>.-Hoja de Parte-.</h1>
+                <tr>
+                    <th style="text-align: center" class="th is-black">ID</th>
+                    <th style="text-align: center" class="th is-black">Concepto</th>
+                    <th style="text-align: center" class="th is-black">Cantidad</th>
+                    <th style="text-align: center" class="th is-black">Reparacion</th>
+                    <th style="text-align: center" class="th is-black">MecanicoId</th>
+                </tr>
+                <br>
+                <br>
+   </center>
+    @each(hojas in varhoj)
+    <tr>
+        <center>
+        <form action="delete/{{hojas.id }} " method="GET">
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ hojas.id }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ hojas.concepto }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ hojas.cantidad }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ hojas.reparacion }}</th>
+        <th style="text-align: center;" class="th is-primary has-addons is-centered">{{ hojas.mecanicoResponsable_id }}
+        <button>ELIMINAR</button> <a href="hojEdit/{{hojas.id}}">EDITAR</a></form></th>
+        </center>
+    </tr>
+    @endeach
+    <br>
+    <br>
+    <br>
+    <center> <a href="../">VOLVER</a> <a href="hojCreate">CREAR</a> </center>
+    
+</body>
+</html>

@@ -1,0 +1,79 @@
+<html style="background-color: gray">
+    <body>
+        <br>
+        <center>
+        <div>
+            <table style="text-align: center" class="table is-bordered is-striped is-narrow is-hoverable container">
+                <br>
+                <br>
+                <br>
+                <tr>
+                    <th style="text-align: center" class="th is-black">ID</th>
+                    <th style="text-align: center" class="th is-black">Modelo</th>
+                    <th style="text-align: center" class="th is-black">Color</th>
+                    <th style="text-align: center" class="th is-black">Fecha</th>
+                    <th style="text-align: center" class="th is-black">Hora</th>
+                    <th style="text-align: center" class="th is-black">Cliente</th>
+                </tr>
+                <tr>
+                        <th style="text-align: center;" class = "th is-primary has-addons is-centered">{{ vehi.id }} </th>
+                        <th style="text-align: center" class = "th is-danger"> {{ vehi.modelo }} </th>
+                        <th style="text-align: center" class = "th is-warning"> {{ vehi.color }} </th>
+                        <th style="text-align: center" class = "th is-success"> {{ vehi.fecha }} </th>
+                        <th style="text-align: center" class = "th is-link">{{vehi.hora_ent}}</th>
+                        <th style="text-align: center" class = "th is-info">{{vehi.cliente_id}}</th>
+                        
+                </tr>
+            </table>
+        </div> <br>
+    </center>
+
+        <div style="text-align: center">
+            <center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <table style="text-align: center" class="table is-bordered is-striped is-narrow is-hoverable container">
+                <form action="{{ vehi.id }}" method="POST">
+                <tr>
+                    <th class="th is-info" style="text-align: end">MODIFICAR</th>
+                    <th class="th is-info" style="text-align: initial">VEHICULO</th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">NUEVO MODELO</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{vehi.modelo}}" name="modelo" style="text-align: center" class="message is-primary"> </th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">NUEVO COLOR</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{vehi.color}}" name="color" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">NUEVA FECHA</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{vehi.fecha}}" name="fecha" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">NUEVO HORA</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{vehi.hora_ent}}" name="hora_ent" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-black" style="text-align: center"><label for="">CLIENTE ID</label> </th>
+                    <th class="th is-primary"><input type="text" placeholder="" value="{{vehi.cliente_id}}" name="cliente_id" style="text-align: center" class="message is-primary"></th>
+                </tr>
+                <tr>
+                    <th class="th is-success" style="text-align: center"></th>
+                </tr>
+            </table>
+            <button type="submit" class="button is-warning is-rounded">Modificar Vehiculo</button>
+
+            </form>
+            <br>
+            <br>
+            <a href="../vehiculo">
+                <button class="button is-primary is-rounded">Regresar</button>
+            </a>
+            
+        </div>
+    </center>
+    </body>
+</html>
